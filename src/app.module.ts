@@ -7,12 +7,13 @@ import { ProductController } from './product/product.controller';
 import { EmployeeModule } from './employee/employee.module';
 import { StudentsModule } from './students/students.module';
 import { CustomerModule } from './customer/customer.module';
+import { TestingpipeController } from './testingpipe/testingpipe.controller';
 
 
 
 @Module({
   imports: [EmployeeModule,StudentsModule, CustomerModule],
-  controllers: [AppController, UserController, ProductController],
+  controllers: [AppController, UserController, ProductController, TestingpipeController],
   providers: [AppService, ProductService],
 })
 export class AppModule {}

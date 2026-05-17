@@ -9,12 +9,13 @@ import { CustomerModule } from './customer/customer.module';
 import { TestingpipeController } from './testingpipe/testingpipe.controller';
 import { GaurdsTestingController } from './gaurds-testing/gaurds-testing.controller';
 import { GaurdsTestingService } from './gaurds-testing/gaurds-testing.service';
+import { FilterTestController } from './filter-test/filter-test.controller';
 
 
 
 @Module({
   imports: [StudentsModule, CustomerModule],
-  controllers: [AppController, UserController, ProductController, TestingpipeController, GaurdsTestingController],
+  controllers: [AppController, UserController, ProductController, TestingpipeController, GaurdsTestingController, FilterTestController],
   providers: [AppService, ProductService, GaurdsTestingService],
 })
 export class AppModule {}

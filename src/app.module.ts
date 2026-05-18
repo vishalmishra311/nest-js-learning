@@ -11,11 +11,16 @@ import { GaurdsTestingController } from './gaurds-testing/gaurds-testing.control
 import { GaurdsTestingService } from './gaurds-testing/gaurds-testing.service';
 import { FilterTestController } from './filter-test/filter-test.controller';
 import { LoggerMiddleware } from './middleware/logger/logger.middleware';
+import { ConfigModule } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
 
 
 
 @Module({
-  imports: [StudentsModule, CustomerModule],
+  imports: [StudentsModule, CustomerModule,
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGO_URI!)
+  ],
   controllers: [AppController, UserController, ProductController, TestingpipeController, GaurdsTestingController, FilterTestController],
   providers: [AppService, ProductService, GaurdsTestingService],
 })

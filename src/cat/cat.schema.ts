@@ -10,7 +10,7 @@ export class Cat {
   name: string;
 
   @Prop()
-  age: number;
+  age?: number;
 
   @Prop()
   breed: string;

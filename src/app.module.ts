@@ -15,6 +15,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { StudentModule } from './student/student.module';
 import { CatModule } from './cat/cat.module';
+import { EmployeeModule } from './employee/employee.module';
 
 
 
@@ -23,7 +24,8 @@ import { CatModule } from './cat/cat.module';
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URI!),
     StudentModule,
-    CatModule
+    CatModule,
+    EmployeeModule
   ],
   controllers: [AppController, UserController, ProductController, TestingpipeController, GaurdsTestingController, FilterTestController],
   providers: [AppService, ProductService, GaurdsTestingService],
